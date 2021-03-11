@@ -1,0 +1,44 @@
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav_wrapper {
+    display: grid;
+    height: 100px;
+    width: 100vw;
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    z-index: 10;
+    grid-template-columns: 100px 1fr 100px;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "nalo naph nabr"
+    ;
+
+}
+
+#nav_logo {
+    grid-area: nalo;
+    background: green;
+}
+
+
+
+#nav_ham_icon {
+    grid-area: nabr;
+    background-color: salmon;
+}
+
+#nav_placeholder {
+    grid-area: naph;
+    background-color: sandybrown;
+}
+
+#nav_flex_wrapper {
+    display: none;
+}
