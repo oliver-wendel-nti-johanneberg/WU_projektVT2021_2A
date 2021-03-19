@@ -6,6 +6,12 @@
     box-sizing: border-box;
 }
 
+
+
+
+
+/* Nav Section - CSS */
+
 .nav_wrapper {
     display: grid;
     height: 80px;
@@ -24,14 +30,14 @@
 
 #nav_logo {
     grid-area: nalo;
-    background: green;
+    background:  #474B4F;
 }
 
 
 
 #nav_ham_icon {
     grid-area: nabr;
-    background-color: salmon;
+    background: rgb(32, 32, 32);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -39,58 +45,332 @@
 }
 
 .nav_line {
-    background-color: blueviolet;
+    background-color: rgb(209, 0, 209);
     width: 40px;
     height: 4px;
     margin: 5px;
-    border-radius: 25%;
+    border-radius: 100%;
+    transition: all 0.1s;
+    z-index: 10;
 }
 
-#line_1 {
-    animation: line_1_animation 1s;
-    background-color: red;
+.burger_toggle #line_1 {
+    animation: line_1_animation 0.3s 1;
+    transform: translate(2px, 14px) rotate(45deg);
 }
 
-#line_2 {
+.burger_toggle #line_2 {
     opacity: 0;
-    background-color: green;
 }
 
 
-#line_3 {
-    background-color: blue;
-    animation: line_2_animation 1s;
+.burger_toggle #line_3 {
+    animation: line_3_animation 0.3s 1;
+    transform: translate(1px, -14px) rotate(-45deg);
 }
 
 @keyframes line_1_animation {
    0%  {transform: translate(0px, 0px) rotate(0deg);} 
    25% {transform: translate(-40px, 0px); opacity: 0;}
-   75% {transform: translate(-40px, -20px) rotate(45deg); opacity: 0;}
-   90% {transform: translate(3px, 14px) rotate(45deg)}
+   90% {transform: translate(-40px, -20px) rotate(45deg); opacity: 0;}
+   100% {transform: translate(2px, 14px) rotate(45deg)}
 }
 
-@keyframes line_2_animation {
+@keyframes line_3_animation {
     0% {transform: translate(0px, 0px) rotate(0deg);}
    25% {transform: translate(40px, 0px); opacity: 0;}
-   75% {transform: translate(40px, -47px) rotate(-45deg); opacity: 0;}
-   90% {transform: translate(1px, -13px) rotate(-45deg);}
+   90% {transform: translate(40px, -47px) rotate(-45deg); opacity: 0;}
+   100% {transform: translate(1px, -14px) rotate(-45deg);}
 }
 
 #nav_placeholder {
     grid-area: naph;
-    background-color: sandybrown;
+    background-color: #474B4F;
 }
 
 .nav_list {
     display: flex;
     position: absolute;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
+    padding-top: 80px;
+    padding-left: 50px;
     height: 100vh;
-    width: 200px;
-    right: -200px;
+    width: 250px;
+    right: -251px;
     top: 0px;
-    background: salmon;
+    z-index: 0;
+    background: rgb(32, 32, 32);
+    transition: all 0.3s;
+    list-style-type: none;
+
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.nav_link {
+    color: rgb(209, 0, 209);
+    text-decoration: none;
+    font-size: 22px;
+}
+
+.list_toggle {
+    transform: translateX(-250px);
+}
+
+
+
+
+
+
+
+/* Index Section - CSS */
+
+.grid_wrapper_main {
+
+    display: grid;
+    height: 2000px;
+    width: 100vw;
+    position: relative;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 900px 500px 200px 400px;
+    grid-template-areas: 
+    "mahe mahe"
+    "mas1 mas2"
+    "maar maar"
+    "fowr fowr"
+    ;
+
+}
+
+
+#header_flex_main {
+    grid-area: mahe;
+    background: #474B4F;
+}
+
+
+#section_1_main{
+    grid-area: mas1;
+    background: plum;
+}
+
+#section_2_main {
+    grid-area: mas2;
+    background: purple;
+}
+
+#article_main {
+    grid-area: maar;
+    background: lightcoral;
+}
+
+
+
+
+
+
+
+/* Shop Section - CSS */
+
+.grid_wrapper_shop {
+
+    display: grid;
+    height: 1700px;
+    width: 100vw;
+    position: relative;
+    grid-template-columns: 1fr;
+    grid-template-rows: 500px 810px 400px;
+    grid-template-areas: 
+    "shhe"
+    "shma"
+    "fowr"
+    ;
+
+}
+
+.header_shop {
+    grid-area: shhe;
+    background: lightblue;
+}
+
+
+.main_wrapper_shop {
+    grid-area: shma;
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 270px 270px 270px;
+    grid-template-areas: 
+    "shs1 shs2"
+    "shs3 shs4"
+    "shs5 shs6"
+    ;
+
+}
+
+#section_1_shop {
+    grid-area: shs1;
+    background:  purple;
+}
+
+#section_2_shop {
+    grid-area: shs2;
+    background: indigo;
+}
+
+#section_3_shop {
+    grid-area: shs3;
+    background: rgb(32, 32, 32);
+}
+
+#section_4_shop {
+    grid-area: shs4;
+    background: #474B4F;
+}
+
+#section_5_shop {
+    grid-area: shs5;
+    background: #6b6e70;
+}
+
+#section_6_shop {
+    grid-area: shs6;
+    background: rgb(209, 0, 209);
+}
+
+
+
+/* Team Section - css */
+
+.grid_wrapper_team {
+
+    display: grid;
+    height: 1800px;
+    width: 100vw;
+    position: relative;
+    grid-template-columns: 1fr;
+    grid-template-rows: 800px 600px 400px;
+    grid-template-areas: 
+    "tehe"
+    "tema"
+    "fowr"
+    ;
+
+}
+
+.header_team {
+    grid-area: tehe;
+    background: lightblue;
+}
+
+
+.main_wrapper_team {
+    grid-area: tema;
+    background: rgb(255, 255, 184);
+}
+
+.main_wrapper_team {
+    grid-area: tema;
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 300px 300px;
+    grid-template-areas: 
+    "tes1 tes2 tes3"
+    "tes4 tes5 tes6"
+    ;
+
+}
+
+#section_1_team {
+    grid-area: tes1;
+    background:  purple;
+}
+
+#section_2_team {
+    grid-area: tes2;
+    background: indigo;
+}
+
+#section_3_team {
+    grid-area: tes3;
+    background: rgb(32, 32, 32);
+}
+
+#section_4_team {
+    grid-area: tes4;
+    background: #474B4F;
+}
+
+#section_5_team {
+    grid-area: tes5;
+    background: #6b6e70;
+}
+
+#section_6_team {
+    grid-area: tes6;
+    background: rgb(209, 0, 209);
+}
+
+
+
+/* Footer Section - CSS */
+
+.footer_wrapper {
+
+    grid-area: fowr;
+    display: grid;
+    height: 400px;
+    width: 100vw;
+    position: relative;
+    grid-template-columns: 1fr 1fr minmax(80px, 1fr);
+    grid-template-rows: 100px 240px 80px;
+    grid-template-areas: 
+    "foar foar foar"
+    "fose fose fose"
+    "foas foas fodi"
+    ;
+
+}
+
+
+#footer_article {
+    grid-area: foar;
+    background: green;
+
+}
+
+
+#footer_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding-left: 50px;
+    grid-area: fose;
+    background: red;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+#footer_aside {
+    grid-area: foas;
+    background: purple;
+}
+
+
+#footer_div{
+    grid-area: fodi;
+    background: plum;
+}
+
+#footer_section ul {
+    list-style-type: none;
+    
+}
+
+#footer_section ul li {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
