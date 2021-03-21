@@ -10,6 +10,10 @@
 
 
 
+
+
+
+
 /* Nav Section - CSS */
 
 .nav_wrapper {
@@ -124,6 +128,8 @@
 
 
 
+
+
 /* Index Section - CSS */
 
 .grid_wrapper_main {
@@ -164,6 +170,8 @@
     grid-area: maar;
     background: lightcoral;
 }
+
+
 
 
 
@@ -241,6 +249,12 @@
 
 
 
+
+
+
+
+
+
 /* Team Section - css */
 
 .grid_wrapper_team {
@@ -312,6 +326,246 @@
     grid-area: tes6;
     background: rgb(209, 0, 209);
 }
+
+
+
+
+
+
+
+
+
+/* News Section - CSS */
+
+.grid_wrapper_news {
+
+    display: grid;
+    height: 1820px;
+    width: 100vw;
+    position: relative;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 120px 600px 300px 200px 200px 400px;
+    grid-template-areas: 
+    "nehe nehe nehe"
+    "nema nema nema"
+    "nea1 nea2 nea3"
+    "nes3 nes3 nes3"
+    "nes4 nes4 nes4"
+    "fowr fowr fowr"
+    ;
+
+}
+
+
+#header_flex_news {
+    grid-area: nehe;
+    background: #474B4F;
+}
+
+.main_wrapper_news {
+    grid-area: nema;
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 600px;
+    grid-template-areas: 
+    "nes1 nes2"
+    ;
+
+}
+
+#section_1_news {
+    grid-area: nes1;
+    background: purple;
+}
+
+#section_2_news {
+    grid-area: nes2;
+    background: lightcoral;
+}
+
+#article_1_news {
+    grid-area: nea1;
+    background: plum;
+}
+
+#article_2_news {
+    grid-area: nea2;
+    background: purple;
+}
+
+#article_3_news {
+    grid-area: nea3;
+    background: lightcoral;
+}
+
+#section_3_news {
+    grid-area: nes3;
+    background: purple;
+}
+
+#section_4_news {
+    grid-area: nes4;
+    background: lightcoral;
+}
+
+
+
+
+
+
+
+
+
+/* About Us Section - CSS */
+
+
+.grid_wrapper_about {
+
+    display: grid;
+    height: 2300px;
+    width: 100vw;
+    position: relative;
+    grid-template-columns: 1fr;
+    grid-template-rows: 500px 400px 400px 600px 400px;
+    grid-template-areas: 
+    "abhe"
+    "abs1"
+    "abs2"
+    "abs3"
+    "fowr"
+    ;
+
+}
+
+.header_about {
+    grid-area: abhe;
+    background: lightblue;
+}
+
+#section_1_about {
+    grid-area: abs1;
+    background:  purple;
+}
+
+#section_2_about {
+    grid-area: abs2;
+    background: indigo;
+}
+
+#section_wrapper_about {
+    grid-area: abs3;
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 300px 300px;
+    grid-template-areas: 
+    "aba1 aba2"
+    "aba3 aba4"
+    ;
+
+}
+
+#article_1_about {
+    grid-area: aba1;
+    background: rgb(32, 32, 32);
+}
+
+#article_2_about {
+    grid-area: aba2;
+    background: #474B4F;
+}
+
+#article_3_about {
+    grid-area: aba3;
+    background: #6b6e70;
+}
+
+#article_4_about {
+    grid-area: aba4;
+    background: rgb(209, 0, 209);
+}
+
+
+
+
+
+
+
+
+
+/* Fanclub Section - CSS */
+
+.grid_wrapper_fanclub {
+
+    display: grid;
+    height: 2100px;
+    width: 100vw;
+    position: relative;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 900px 300px 100px 400px 400px;
+    grid-template-areas: 
+    "fahe fahe"
+    "faa1 faa2"
+    "fadi fadi"
+    "fase fase"
+    "fowr fowr"
+    ;
+
+}
+
+.header_fanclub {
+    grid-area: fahe;
+    background: lightblue;
+}
+
+#article_1_fanclub {
+    grid-area: faa1;
+    background: rgb(32, 32, 32);
+}
+
+#article_2_fanclub {
+    grid-area: faa2;
+    background: #adadad;
+}
+
+#div_1_fanclub {
+    grid-area: fadi;
+    background: #adadad;
+}
+
+#section_wrapper_fanclub {
+    grid-area: fase;
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 400px;
+    grid-template-areas: 
+    "faa3 faa4 faa5"
+    ;
+
+}
+
+#article_3_fanclub {
+    grid-area: faa3;
+    background: rgb(32, 32, 32);
+}
+
+#article_4_fanclub {
+    grid-area: faa4;
+    background: #adadad;
+}
+
+#article_5_fanclub {
+    grid-area: faa5;
+    background: #6b6e70;
+}
+
+
+
+
+
+
 
 
 
