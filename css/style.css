@@ -59,8 +59,14 @@ ol, ul {
     font-family: 'Arial Narrow bold', monospace;
 }
 
+@media screen and (min-width: 450px) {
 
+.read_more_button {
+    margin-right: auto;
+    margin-left: auto;
+}
 
+}
 
 
 
@@ -177,9 +183,71 @@ ol, ul {
 }
 
 
+@media screen and (min-width: 770px) {
+
+    .nav_wrapper {
+        display: grid;
+        height: 120px;
+        width: 100vw;
+        top: 0px;
+        left: 0px;
+        position: fixed;
+        grid-template-columns: 100px 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "nalo nase"
+        ;
+        z-index: 2;
+    
+    }
+    
+    .nav_section {
+        grid-area: nase;
+        background: black;
+        padding: 20px;
+    }
+
+    .nav_list {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
+        list-style-type: none;
+        font-style: italic;
+        font-weight: bolder;
+        font-family: 'Arimo', sans-serif;
+        position: relative;
+        padding-top: 0px;
+        padding-left: 0px;
+        height: 100%;
+        width: 100%;
+        right:0px;
+        top: 0px;
+        transition: all;
+        list-style-type: none;
+        font-style: italic;
+        font-weight: bolder;
+        font-family: 'Arimo', sans-serif;
+    }
+
+    .nav_link {
+        color: rgb(173, 200, 230);
+        text-decoration: none;
+        font-size: 2.8vw;
+        margin-left: 15px;
+    }
+
+    #nav_placeholder {
+        display: none;
+    }
+    
+        
+    #nav_ham_icon {
+        display: none;
+    } 
 
 
-
+}
 
 
 
@@ -189,7 +257,7 @@ ol, ul {
 .grid_wrapper_main {
 
     display: grid;
-    height: 2300px;
+    height: auto;
     width: 100vw;
     position: relative;
     grid-template-columns: minmax(160px, 1fr) minmax(160px, 1fr);
@@ -256,34 +324,6 @@ header h1 {
 
 }
 
-.read_more_button {
-    display: block;
-    border: black 1px solid;
-    border-radius: 0%;
-    color: black;
-    text-align: center;
-    position: relative;
-
-
-}
-
-.read_more_button:hover {
-    transition: all 4s;
-    background-color: rgb(32, 32, 32);
-}
-
-.read_more_button span {
-
-    position: absolute;
-    top: -4px;
-    left: 20px;
-    color: black;
-    margin-top: 10px;
-    font-size: 16px;
-    font-weight: 500;
-    font-family: 'Arial Narrow bold', monospace;
-}
-
 .section_main div a:visited {
     color: black;
 }
@@ -319,7 +359,7 @@ header h1 {
     margin-top: 10px;
 }
 
-#article_main_grid {
+#section_main_grid {
 
     grid-area: maar;
     background:  rgb(32, 32, 32);
@@ -349,6 +389,7 @@ header h1 {
 .underarticle_main p {
     font-family: 'Arial Narrow Bold' ,sans-serif;
     margin-top: 15px;
+    font-size: 4vw;
 }
 
 #underarticle_1_main {
@@ -368,6 +409,10 @@ header h1 {
     list-style-type: none;
     font-family: 'Arial Narrow Bold' ,sans-serif;
     margin-top: 10px;
+}
+
+#underarticle_2_main ol li {
+    font-size: 4vw;
 }
 
 .article_main_list {
@@ -405,6 +450,169 @@ header h1 {
     left: 5px;
 }
 
+@media screen and (min-width: 450px) {
+
+.grid_wrapper_main {
+
+    grid-template-rows: 900px 500px 200px auto;
+
+}
+
+    .section_main a {
+        width: 150px;
+        height: 30px;
+        margin-top: 35px;
+        position: relative;
+        right: 0;
+        bottom: 0;
+    
+    }
+    
+    .section_main div a:visited {
+        color: black;
+    }
+    
+    .underarticle_main a {
+        position: relative;
+        bottom: 0;
+        left: 0;
+        margin-top: 35px;
+        border-color: white;
+    }
+
+    .article_main_list {
+        text-align: center;
+    }
+    
+    .underarticle_main p {
+        font-family: 'Arial Narrow Bold' ,sans-serif;
+        margin-top: 15px;
+        font-size: 17px;
+    }
+
+
+    #section_2_main img {
+        width: 80%;
+    }
+
+    #section_1_main img {
+        width: 80%;
+    }
+    
+
+    #underarticle_2_main ol li {
+        font-size: 17px;
+    }
+
+    .grid_wrapper_main {
+
+        display: grid;
+        height: auto;
+        width: 100vw;
+        position: relative;
+        grid-template-columns: minmax(160px, 1fr) minmax(160px, 1fr);
+        grid-template-rows: 900px auto 200px 700px;
+        grid-template-areas: 
+        "mahe mahe"
+        "mas1 mas2"
+        "maar maar"
+        "fowr fowr"
+        ;
+    
+    }
+
+}
+
+@media screen and (min-width: 770px) {
+
+    
+    .grid_wrapper_main {
+
+        display: grid;
+        height: auto;
+        width: 100vw;
+        position: relative;
+        grid-template-columns: minmax(160px, 1fr) minmax(160px, 1fr) minmax(210px, 1fr);
+        grid-template-rows: 900px minmax(500px, auto) 700px;
+        grid-template-areas: 
+        "mahe mahe mahe"
+        "mas1 mas2 maar"
+        "fowr fowr fowr"
+        ;
+    
+    }
+    
+    #section_main_grid {
+
+        grid-area: maar;
+        background:  rgb(32, 32, 32);
+        display: grid;
+        position: relative;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "maa1"
+        "maa2"
+        ;
+    }
+
+    .section_main h2 {
+        font-size: 3vw;
+    }
+
+    .section_main p {
+        font-size: 2.5vw;
+    }
+
+    #section_2_main img {
+        width: 100%;
+    }
+
+    #section_1_main img {
+        width: 100%;
+    }
+    
+    #underarticle_1_main {
+        border-right: none;
+        border-bottom:  2px solid rgb(107, 110, 112);
+    }
+
+    #underarticle_2_main {
+        border-left: none;
+        border-top:  2px solid rgb(107, 110, 112);
+    }
+
+    .underarticle_main h2 {
+        font-size: 3vw;
+    }
+
+    .underarticle_main p {
+        font-size: 2.5vw;
+    }
+
+    .underarticle_main ol li {
+        font-size: 2.5vw !important;
+    }
+
+    .underarticle_main a {
+        width: 150px;
+        height: 40px;
+    }
+
+    #article_main_button_2 span {
+        font-size: 18px;
+        top: -2px;
+        left: 15px;
+    }
+
+    #article_main_button_1 span {
+        font-size: 18px;
+        top: -2px;
+        left: 18px;
+    }
+
+
+}
 
 
 
@@ -420,7 +628,7 @@ header h1 {
 .grid_wrapper_shop {
 
     display: grid;
-    height: 2700px;
+    height: auto;
     width: 100vw;
     position: relative;
     grid-template-columns: 1fr;
@@ -603,11 +811,122 @@ header h1 {
     font-family: 'Arial Narrow bold', monospace;
 }
 
+@media screen and (min-width: 450px) {
+
+    .grid_wrapper_shop {
+
+        display: grid;
+        height: auto;
+        width: 100vw;
+        position: relative;
+        grid-template-columns: 1fr;
+        grid-template-rows: 500px auto auto 400px;
+        grid-template-areas: 
+        "shhe"
+        "shma"
+        "shs7"
+        "fowr"
+        ;
+    
+    }
+
+    .main_wrapper_shop {
+        grid-area: shma;
+        display: grid;
+        position: relative;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: 
+        "shs1 shs2"
+        "shs3 shs4"
+        "shs5 shs6"
+        ;
+    
+    }
 
 
+}
 
 
+@media screen and (min-width: 770px) {
 
+    .grid_wrapper_shop {
+
+        display: grid;
+        height: auto;
+        width: 100vw;
+        position: relative;
+        grid-template-columns: 1fr;
+        grid-template-rows: 500px auto auto 400px;
+        grid-template-areas: 
+        "shhe"
+        "shma"
+        "shs7"
+        "fowr"
+        ;
+    
+    }
+
+    
+    .main_wrapper_shop {
+        grid-area: shma;
+        display: grid;
+        position: relative;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+        "shs1 shs2 shs3"
+        "shs4 shs5 shs6"
+        ;
+    
+    }
+
+    .section_shop p {
+        margin-top: 10px;
+        font-family: 'Arial Narrow Bold', sans-serif;
+        overflow: hidden;
+        color: black;
+        font-size: 27px;
+    }
+    
+    .section_shop h2 {
+        margin-top: 10px;
+        font-family: 'Arimo', sans-serif;
+        text-align: start;
+        font-size: 27.5px;
+        color: rgb(173, 200, 230);
+    }
+
+    .section_shop strong {
+        font-size: 27px;
+    }
+
+    
+#section_order_shop a {
+    position: relative;
+    height: 40px;
+    width: 200px;
+    bottom: 15px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    border-width: 2px;
+    border-radius: 5%;
+
+}
+
+#section_order_shop span{
+    position: absolute;
+    top: -5px;
+    left: 40px;
+    color: black;
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Arial Narrow bold', monospace;
+}
+
+}
 
 
 /* Team Section - css */
@@ -615,8 +934,8 @@ header h1 {
 .grid_wrapper_team {
 
     display: grid;
-    height: 3400px;
-    width: 98.7vw;
+    height: auto;
+    width: 100vw;
     position: relative;
     grid-template-columns: 1fr;
     grid-template-rows: 800px repeat(400px, 6) 400px;
@@ -824,6 +1143,285 @@ header h1 {
 }
 
 
+@media screen and (min-width: 450px) {
+
+    .grid_wrapper_team {
+
+        display: grid;
+        height: auto;
+        width: 100vw;
+        position: relative;
+        grid-template-columns: 1fr;
+        grid-template-rows: 800px repeat(auto, 6) 400px;
+        grid-template-areas: 
+        "tehe"
+        "tes1"
+        "tes2" 
+        "tes3"
+        "tes4" 
+        "tes5"
+        "tes6"
+        "fowr"
+        ;
+    
+    }
+
+    .section_team {
+        display: grid;
+        position: relative;
+        background-color: rgb(32, 32, 32);
+        color: white;
+        padding: 25px;
+        font-family: 'Arial Narrow Bold', sans-serif;
+        grid-template-columns: 150px minmax(0px, 1fr);
+        grid-template-rows: 300px minmax(0px, 1fr);
+    
+    
+    }
+
+    .player_stats {
+        font-size: 25px;
+    }
+
+    #first_list_team {
+        color: rgb(173, 200, 230);
+        font-size: 34px;
+        margin-top: 0px;
+    }
+
+    .section_team article h3 {
+        color: rgb(173, 200, 230);
+        font-family: 'Arimo', sans-serif;
+        font-size: 25px;
+    }
+    
+    .section_team article p {
+        margin-top: 5px;
+        font-size: 22px;
+    }
+    
+
+}
+
+@media screen and (min-width: 770px) {
+
+
+    .grid_wrapper_team {
+
+        display: grid;
+        height: auto;
+        width: 100vw;
+        position: relative;
+        grid-template-columns: 1fr 1fr 1fr ;
+        grid-template-rows: 800px repeat(auto, 2) 400px;
+        grid-template-areas: 
+        "tehe tehe tehe"
+        "tes1 tes2 tes3"
+        "tes4 tes5 tes6" 
+        "fowr fowr fowr"
+        ;
+    
+    }
+
+    
+    .section_team {
+
+        display: grid;
+        position: relative;
+        background-color: rgb(32, 32, 32);
+        color: white;
+        padding: 25px;
+        font-family: 'Arial Narrow Bold', sans-serif;
+        grid-template-columns: 100px minmax(0px, 1fr);
+        grid-template-rows: 200px minmax(0px, 1fr);
+
+    }
+
+    .player_stats {
+        font-size: 14.4px;
+    }
+
+    #first_list_team {
+        color: rgb(173, 200, 230);
+        font-size: 19.2px;
+        margin-top: 0px;
+    }
+
+    .section_team article h3 {
+        color: rgb(173, 200, 230);
+        font-family: 'Arimo', sans-serif;
+        font-size: 17px;
+    }
+    
+    .section_team article p {
+        margin-top: 5px;
+        font-size: 12px;
+    }
+    
+    
+    #section_1_team {
+        grid-area: tes1;
+        grid-template-areas: 
+        "s1di s1a1"
+        "s1a2 s1a2"
+        ;
+    }
+
+    #section_2_team {
+        grid-area: tes2;
+        grid-template-areas: 
+        "s2di s2a1"
+        "s2a2 s2a1"
+        ;
+    }
+
+
+    #section_3_team {
+        grid-area: tes3;
+        grid-template-areas: 
+        "s3di s3a1"
+        "s3a2 s3a1"
+        ;
+    }
+
+    #section_4_team {
+        grid-area: tes4;
+        grid-template-areas: 
+        "s4di s4a1"
+        "s4a2 s4a1"
+        ;
+    }
+
+    #section_5_team {
+        grid-area: tes5;
+        grid-template-areas: 
+        "s5di s5a1"
+        "s5a2 s5a1"
+        ;
+    }
+
+    #section_6_team {
+        grid-area: tes6;
+        grid-template-areas: 
+        "s6di s6a1"
+        "s6a2 s6a1"
+        ;
+    }
+
+
+
+}
+
+@media screen and (min-width: 970px) {
+
+    .grid_wrapper_team {
+
+        display: grid;
+        height: auto;
+        width: 100vw;
+        position: relative;
+        grid-template-columns: 1fr 1fr 1fr ;
+        grid-template-rows: 800px repeat(auto, 2) 400px;
+        grid-template-areas: 
+        "tehe tehe tehe"
+        "tes1 tes2 tes3"
+        "tes4 tes5 tes6" 
+        "fowr fowr fowr"
+        ;
+    
+    }
+
+    
+    .section_team {
+
+        display: grid;
+        position: relative;
+        background-color: rgb(32, 32, 32);
+        color: white;
+        padding: 25px;
+        font-family: 'Arial Narrow Bold', sans-serif;
+        grid-template-columns: 150px minmax(0px, 1fr);
+        grid-template-rows: 300px minmax(0px, 1fr);
+
+    }
+
+    .player_stats {
+        font-size: 1.7vw;
+    }
+
+    #first_list_team {
+        color: rgb(173, 200, 230);
+        font-size: 1.9vw;
+        margin-top: 0px;
+    }
+
+    .section_team article h3 {
+        color: rgb(173, 200, 230);
+        font-family: 'Arimo', sans-serif;
+        font-size: 1.8vw;
+    }
+    
+    .section_team article p {
+        margin-top: 5px;
+        font-size: 1.7vw
+    }
+    
+    
+    #section_1_team {
+        grid-area: tes1;
+        grid-template-areas: 
+        "s1di s1a1"
+        "s1a2 s1a2"
+        ;
+    }
+
+    #section_2_team {
+        grid-area: tes2;
+        grid-template-areas: 
+        "s2di s2a1"
+        "s2a2 s2a2"
+        ;
+    }
+
+
+    #section_3_team {
+        grid-area: tes3;
+        grid-template-areas: 
+        "s3di s3a1"
+        "s3a2 s3a2"
+        ;
+    }
+
+    #section_4_team {
+        grid-area: tes4;
+        grid-template-areas: 
+        "s4di s4a1"
+        "s4a2 s4a2"
+        ;
+    }
+
+    #section_5_team {
+        grid-area: tes5;
+        grid-template-areas: 
+        "s5di s5a1"
+        "s5a2 s5a2"
+        ;
+    }
+
+    #section_6_team {
+        grid-area: tes6;
+        grid-template-areas: 
+        "s6di s6a1"
+        "s6a2 s6a2"
+        ;
+    }
+
+
+
+}
+
+
+
 
 
 
@@ -835,11 +1433,11 @@ header h1 {
 .grid_wrapper_news {
 
     display: grid;
-    height: 3550px;
+    height: auto;
     width: 100vw;
     position: relative;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
-    grid-template-rows: 180px 1400px 300px 500px 850px 400px;
+    grid-template-rows: 180px auto auto auto auto 400px;
     grid-template-areas: 
     "nehe nehe nehe"
     "nema nema nema"
@@ -875,7 +1473,7 @@ header h1 {
     display: grid;
     position: relative;
     grid-template-columns: 1fr;
-    grid-template-rows: 700px 700px;
+    grid-template-rows: auto auto;
     grid-template-areas: 
     "nes1"
     "nes2"
@@ -928,6 +1526,7 @@ header h1 {
 .article_news {
     padding: 10px;
     padding-top: 0px;
+    border-top: 1px black solid;
 }
 
 .article_news h3 {
@@ -1053,6 +1652,116 @@ header h1 {
     font-size: 3.5vw;
 }
 
+@media screen and (min-width: 450px) {
+
+    .section_main_news h2 {
+        font-size: 5.7vw;
+    }
+
+    .section_main_news h3 {
+        font-size: 3.5vw;
+    }
+
+    .section_main_news p {
+        font-size: 3.5vw;
+    }
+
+    .article_news {
+        padding-bottom: 25px;
+    }
+
+    .section_results_news {
+        font-size: 3.8vw;
+    }
+
+
+}
+
+
+@media screen and (min-width: 770px) {
+
+    .grid_wrapper_news {
+
+        display: grid;
+        height: auto;
+        width: 100vw;
+        position: relative;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+        grid-template-rows: 180px auto auto auto auto 400px;
+        grid-template-areas: 
+        "nehe nehe nehe"
+        "nema nema nema"
+        "nea1 nea2 nea3"
+        "nes3 nes3 nes3"
+        "nes4 nes4 nes4"
+        "fowr fowr fowr"
+        ;
+    
+    }
+
+    .main_wrapper_news {
+        grid-area: nema;
+        display: grid;
+        position: relative;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "nes1 nes2"
+        ;
+    
+    }
+
+    .section_main_news h2 {
+        font-size: 3.2vw;
+    }
+
+    .section_main_news h3 {
+        font-size: 2.1vw;
+    }
+
+    .section_main_news p {
+        font-size: 2.1vw;
+    }
+
+    .article_news h3 {
+        font-size: 3.2vw;
+    }
+
+    .article_news p {
+        font-size: 2.6vw;
+    }
+
+    .section_results_news  {
+        font-size: 29.5px;
+    }
+
+    .section_results_news h2 {
+        font-size:  41px;
+    }
+
+    .section_results_news h3 {
+        font-size:  32px;
+    }
+
+    .section_results_news ol li {
+        font-size:  22.3px;
+    }
+
+    .section_results_news table {
+        width: 735px;
+    }
+
+    .samlad {
+        font-size: 27px;
+    }
+
+    .slut_resultat {
+        font-size: 27px;
+    }
+
+}
+
+
 
 
 
@@ -1066,11 +1775,11 @@ header h1 {
 .grid_wrapper_about {
 
     display: grid;
-    height: 2300px;
+    height: auto;
     width: 100vw;
     position: relative;
     grid-template-columns: 1fr;
-    grid-template-rows: 500px 400px 400px 600px 400px;
+    grid-template-rows: 500px 400px 400px auto 400px;
     grid-template-areas: 
     "abhe"
     "aba1"
@@ -1141,7 +1850,7 @@ header h1 {
     border-top: black solid 1px;
     border-bottom: black solid 1px;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 300px 300px;
+    grid-template-rows: auto auto;
     grid-template-areas: 
     "abd1 abd2"
     "abd3 abd4"
@@ -1151,112 +1860,84 @@ header h1 {
 
 .div_about img {
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 
 #div_1_about {
     grid-area: abd1;
-    margin: 10px 0 0 10px;
+    margin: 20px 0 0 20px;
 }
 
 #div_2_about {
     grid-area: abd2;
-    margin: 10px 10px 0 0;
+    margin: 20px 20px 0 0;
 
 }
 
 #div_3_about {
     grid-area: abd3;
-    margin: 0 0 10px 10px;
+    margin: 0 0 20px 20px;
 
 }
 
 #div_4_about {
     grid-area: abd4;
-    margin: 0 10px 10px 0;
+    margin: 0 20px 20px 0;
+}
+
+@media screen and (min-width: 450px) {
+
+    .grid_wrapper_about {
+
+        display: grid;
+        height: auto;
+        width: 100vw;
+        position: relative;
+        grid-template-columns: 1fr;
+        grid-template-rows: 500px auto auto auto 400px;
+        grid-template-areas: 
+        "abhe"
+        "aba1"
+        "aba2"
+        "abse"
+        "fowr"
+        ;
+    
+    }
+
+    .article_about h2 {
+        text-align: center;
+    }
+
+    .article_about p {
+        font-size: 20px;
+    }
+
 }
 
 
+@media screen and (min-width: 770px) {
+
+    .article_about h2 {
+        font-size: 3.1vw;
+    }
+
+    .article_about p {
+        font-size: 2.6vw;
+    }
+
+    .article_about {
+        padding-left: 100px;
+    }
+
+    .article_about {
+        padding-right: 100px;
+    }
 
 
 
-
-
-
-
-/* Fanclub Section - CSS */
-
-.grid_wrapper_fanclub {
-
-    display: grid;
-    height: 2100px;
-    width: 100vw;
-    position: relative;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 900px 300px 100px 400px 400px;
-    grid-template-areas: 
-    "fahe fahe"
-    "faa1 faa2"
-    "fadi fadi"
-    "fase fase"
-    "fowr fowr"
-    ;
 
 }
-
-.header_fanclub {
-    grid-area: fahe;
-    background: lightblue;
-}
-
-#article_1_fanclub {
-    grid-area: faa1;
-    background: rgb(32, 32, 32);
-}
-
-#article_2_fanclub {
-    grid-area: faa2;
-    background: #adadad;
-}
-
-#div_1_fanclub {
-    grid-area: fadi;
-    background: #adadad;
-}
-
-#section_wrapper_fanclub {
-    grid-area: fase;
-    display: grid;
-    position: relative;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 400px;
-    grid-template-areas: 
-    "faa3 faa4 faa5"
-    ;
-
-}
-
-#article_3_fanclub {
-    grid-area: faa3;
-    background: rgb(32, 32, 32);
-}
-
-#article_4_fanclub {
-    grid-area: faa4;
-    background: #adadad;
-}
-
-#article_5_fanclub {
-    grid-area: faa5;
-    background: #6b6e70;
-}
-
-
-
-
-
-
-
 
 
 /* Footer Section - CSS */
@@ -1265,7 +1946,7 @@ header h1 {
 
     grid-area: fowr;
     display: grid;
-    height: 700px;
+    height: auto;
     width: 100vw;
     position: relative;
     grid-template-columns: 1fr 1fr minmax(80px, 1fr);
@@ -1359,3 +2040,117 @@ header h1 {
     
 }
 
+#konakt {
+    text-align: center;
+}
+
+@media screen and (min-width: 450px) {
+
+
+    .footer_wrapper {
+
+        grid-area: fowr;
+        display: grid;
+        height: auto;
+        width: 100vw;
+        position: relative;
+        grid-template-columns: 1fr 1fr minmax(80px, 1fr);
+        grid-template-rows: 100px auto 80px;
+        grid-template-areas: 
+        "foar foar foar"
+        "fose fose fose"
+        "foas foas fodi"
+        ;
+        font-family: 'Arial Narrow Bold', sans-serif;
+        color: black;
+    
+    
+    
+    }
+    
+
+
+}
+
+#footer_section ul li {
+    font-size: 5.5vw;
+}
+
+
+@media screen and (min-width: 770px) {
+
+    
+    .footer_wrapper {
+
+        grid-area: fowr;
+        display: grid;
+        height: auto;
+        width: 100vw;
+        position: relative;
+        grid-template-columns: 1fr 1fr minmax(80px, 1fr);
+        grid-template-rows: auto auto 80px;
+        grid-template-areas: 
+        "foar foar foar"
+        "fose fose fose"
+        "foas foas fodi"
+        ;
+        font-family: 'Arial Narrow Bold', sans-serif;
+        color: black;
+    
+    
+    
+    }
+    
+
+    #footer_section {
+        
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "foll folr"
+        ;
+        grid-area: fose;
+        background: rgb(173, 200, 230);
+        padding: 20px;
+        border-bottom: black solid 1px;
+    }
+
+    #footer_section h2 {
+        font-family: 'Arimo', sans-serif;
+        margin-top: 15px;
+        margin-bottom: 10px;
+        font-size: 3vw;
+        text-align: center;
+    
+    }
+
+    #footer_section ul li {
+        font-size: 2.5vw;
+    }
+    
+    
+    
+
+    .list_left {
+        grid-area: foll;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .list_left h2 {
+        font-size: 5vw;
+    }
+
+    .list_right {
+        grid-area: folr;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+
+}
