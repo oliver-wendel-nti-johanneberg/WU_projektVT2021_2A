@@ -718,7 +718,7 @@ header h1 {
     font-family: 'Arimo', sans-serif;
     text-align: start;
     font-size: 3.5vw;
-    color: rgb(173, 200, 230);
+    color: rgb(77, 120, 167);
 }
 
 
@@ -871,7 +871,6 @@ header h1 {
 
 }
 
-
 @media screen and (min-width: 770px) {
 
     .grid_wrapper_shop {
@@ -931,7 +930,6 @@ header h1 {
         font-family: 'Arimo', sans-serif;
         text-align: start;
         font-size: 27.5px;
-        color: rgb(173, 200, 230);
     }
 
     .section_shop strong {
@@ -990,7 +988,6 @@ header h1 {
 }
 
 #header_flex_team {
-    margin-top: 80px;
     grid-area: tehe;
     justify-content: center;
     align-items: center;
@@ -1053,7 +1050,7 @@ header h1 {
     font-size: 4.5vw;
 }
 
-#first_list_team {
+.first_list_team {
     color: rgb(173, 200, 230);
     font-size: 6vw;
 }
@@ -1221,7 +1218,7 @@ header h1 {
         font-size: 25px;
     }
 
-    #first_list_team {
+    .first_list_team {
         color: rgb(173, 200, 230);
         font-size: 34px;
         margin-top: 0px;
@@ -1279,7 +1276,7 @@ header h1 {
         font-size: 14.4px;
     }
 
-    #first_list_team {
+    .first_list_team {
         color: rgb(173, 200, 230);
         font-size: 19.2px;
         margin-top: 0px;
@@ -1391,7 +1388,7 @@ header h1 {
         font-size: 1.7vw;
     }
 
-    #first_list_team {
+    .first_list_team {
         color: rgb(173, 200, 230);
         font-size: 1.9vw;
         margin-top: 0px;
@@ -1546,7 +1543,7 @@ header h1 {
     text-align: start;
     font-size: 26px;
     font-weight: bold;
-    color: rgb(173, 200, 230);
+    color: rgb(77, 120, 167);;
     text-transform: uppercase;
 }
 
@@ -1696,6 +1693,25 @@ header h1 {
 
 @media screen and (min-width: 450px) {
 
+    .grid_wrapper_news {
+
+        display: grid;
+        height: auto;
+        width: 100vw;
+        position: relative;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+        grid-template-rows: 260px auto auto auto auto 400px;
+        grid-template-areas: 
+        "nehe nehe nehe"
+        "nema nema nema"
+        "nea1 nea2 nea3"
+        "nes3 nes3 nes3"
+        "nes4 nes4 nes4"
+        "fowr fowr fowr"
+        ;
+    
+    }
+
     .section_main_news h2 {
         font-size: 5.7vw;
     }
@@ -1722,6 +1738,8 @@ header h1 {
 
 @media screen and (min-width: 770px) {
 
+
+
     .grid_wrapper_news {
 
         display: grid;
@@ -1729,7 +1747,7 @@ header h1 {
         width: 100vw;
         position: relative;
         grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
-        grid-template-rows: 180px auto auto auto auto 400px;
+        grid-template-rows: 350px auto auto auto auto 400px;
         grid-template-areas: 
         "nehe nehe nehe"
         "nema nema nema"
@@ -2064,7 +2082,7 @@ header h1 {
 #footer_aside img {
     height: 40px;
     width: auto;
-
+    
 }
 
 #footer_aside img:hover {
